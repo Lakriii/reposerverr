@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div style="text-align: center; padding: 50px;">
+    <h1>404 – Stránka sa nenašla</h1>
+    <p>Ups, táto stránka už neexistuje alebo si sa preklikol nesprávne.</p>
+    <a href="{% url 'arctiecles-list' %}">← Späť na články</a>
+  </div>
+{% endblock %}

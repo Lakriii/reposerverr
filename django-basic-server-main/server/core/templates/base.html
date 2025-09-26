@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Moja stránka{% endblock %}</title>
+</head>
+<body>
+    {% include 'components/navigation.html' %}
+
+    <hr>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

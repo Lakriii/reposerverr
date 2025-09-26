@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Delete Arctiecle</h1>
+  <p>Are you sure you want to delete "{{ arctiecles }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+  </form>
+  <a href="{% url 'arctiecle-detail' arctiecle.pk %}">Cancel</a>
+{% endblock %}

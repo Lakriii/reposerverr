@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Arctiecles</h1>
+  <ul>
+    {% for arctiecle in arctiecles %}
+      <li>
+        <a href="{% url 'arctiecle-detail' arctiecle.pk %}">{{ arctiecle.title }}</a>
+        ({{ arctiecle.author }})
+      </li>
+    {% empty %}
+      <li>No arctiecles yet.</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'arctiecle-create' %}">➕ Create new arctiecle</a>
+{% endblock %}

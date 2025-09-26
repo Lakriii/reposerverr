@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>{{ arctiecles.title }}</h1>
+  <p><strong>Author:</strong> {{ arctiecles.author }}</p>
+  <p>{{ article.content }}</p>
+
+  <a href="{% url 'arctiecle-update' arctiecle.pk %}">✏️ Edit</a> |
+  <a href="{% url 'arctiecle-delete' arctiecle.pk %}">🗑️ Delete</a> |
+  <a href="{% url 'arctiecle-list' %}">← Back to list</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Môj profil{% endblock %}
+
+
+{% block content %}
+<h1>Ahoj, {{ request.user.get_username }}</h1>
+<ul>
+  <li>Meno: {{ request.user.first_name }} {{ request.user.last_name }}</li>
+  <li>Email: {{ request.user.email }}</li>
+</ul>
+<p><a href="{% url 'profile_edit' %}">Upraviť profil</a></p>
+<p><a href="{% url 'password_change' %}">Zmeniť heslo</a></p>
+{% endblock %}
